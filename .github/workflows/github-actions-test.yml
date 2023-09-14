@@ -1,12 +1,8 @@
 name: GitHub Actions Demo
 run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 
-on: 
-   release:
-      branches: 
-         - '![0-9]+.[0-9]+.[0-9]+-dev'
+on: push
+
 jobs:
-  Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "🎉 The job-test was automatically triggered by a ${{ github.event_name }} event."
+  gitHub-actions-demo:
+    uses: hiasad/GithubActionsReusable/.github/workflows/hello-reusable-workflow.yml@main

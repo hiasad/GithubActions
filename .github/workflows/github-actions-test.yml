@@ -6,3 +6,5 @@ on: push
 jobs:
   gitHub-actions-demo:
     uses: hiasad/GithubActionsReusable/.github/workflows/hello-reusable-workflow.yml@main
+    with:
+      input1: 'value1'
